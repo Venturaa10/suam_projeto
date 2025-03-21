@@ -31,6 +31,9 @@ class FormController {
             $idade = $_POST['idade'];
             $cpf = $_POST['cpf']; // Acessa o valor do campo de input com name="cpf" 
             $email = $_POST['email'];
+            
+            // Armazena os dados na sessão para manter após o redirecionamento
+            $_SESSION['form_data'] = $_POST;
 
             // Validação
             $errors = [];
@@ -76,13 +79,17 @@ class FormController {
                 // } else {
                 //     $errors['general'] = "Erro ao salvar os dados!";
                 // }
+
+                unset($_SESSION['form_data']); // Limpa os campos do input.
+                // unset($_SESSION['errors']); // Limpa as mensagens de erro, mas já que o campo foi validado, então não tem erro. Verificar linha depois.
                 header("Location: index.php?page=quiz");
                 exit();
 
             } else {
-                $_SESSION['errors'] = $errors;  // Usando sessões para manter erros
+                $_SESSION['errors'] = $errors; // Persiste as mensagens de erro para continuar sendo exibida.
                 header("Location: index.php?page=form");
                 exit();
+
             }
         }
     }

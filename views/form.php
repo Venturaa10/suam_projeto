@@ -1,7 +1,16 @@
 <?php
-$title = "Formulario";
 
+// Verifica se há erros ou dados na sessão
+if (isset($_SESSION['errors'])) {
+    $errors = $_SESSION['errors'];
+    unset($_SESSION['errors']); // Limpa os erros depois de exibi-los
+} else {
+    $errors = [];
+}
 
+// Verifica se há dados de formulário armazenados na sessão, persiste os dados mesmo se os campos forem invalidos, ou seja, mantem o campo preenchido.
+$formData = isset($_SESSION['form_data']) ? $_SESSION['form_data'] : [];
+unset($_SESSION['form_data']); // Limpa os dados do formulário após usá-los
 ?>
 
 <div class="container mt-5">
@@ -12,7 +21,7 @@ $title = "Formulario";
         <div class="mb-3">
             <label for="nome" class="form-label">Nome:</label>
             <input class="form-control" type="text" maxlength="80" id="nome" name="nome" placeholder="Seu nome completo" 
-                value="<?php echo isset($_POST['nome']) ? $_POST['nome'] : ''; ?>">
+                value="<?php echo isset($formData['nome']) ? $formData['nome'] : ''; ?>">
             <?php if (isset($errors['nome'])): ?>
                 <div class="text-danger"><?php echo $errors['nome']; ?></div>
             <?php endif; ?>
@@ -22,7 +31,7 @@ $title = "Formulario";
         <div class="mb-3">
             <label for="idade" class="form-label">Idade:</label>
             <input class="form-control" type="text" maxlength="2" id="idade" name="idade" placeholder="Sua Idade" 
-                value="<?php echo isset($_POST['idade']) ? $_POST['idade'] : ''; ?>">
+                value="<?php echo isset($formData['idade']) ? $formData['idade'] : ''; ?>">
             <?php if (isset($errors['idade'])): ?>
                 <div class="text-danger"><?php echo $errors['idade']; ?></div>
             <?php endif; ?>
@@ -32,7 +41,7 @@ $title = "Formulario";
         <div class="mb-3">
             <label for="cpf" class="form-label">CPF:</label>
             <input class="form-control" maxlength="14" type="text" id="cpf" name="cpf" placeholder="111.222.333-44" 
-                value="<?php echo isset($_POST['cpf']) ? $_POST['cpf'] : ''; ?>">
+                value="<?php echo isset($formData['cpf']) ? $formData['cpf'] : ''; ?>">
             <?php if (isset($errors['cpf'])): ?>
                 <div class="text-danger"><?php echo $errors['cpf']; ?></div>
             <?php endif; ?>
@@ -41,7 +50,7 @@ $title = "Formulario";
         <!-- Email -->
         <div class="mb-3">
             <label for="email" class="form-label">E-mail:</label>
-            <input class="form-control" type="email" id="email" name="email" placeholder="nomeUsuario@dominio.com" value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>">
+            <input class="form-control" type="email" id="email" name="email" placeholder="nomeUsuario@dominio.com" value="<?php echo isset($formData['email']) ? $formData['email'] : ''; ?>">
             <?php if (isset($errors['email'])): ?>
                 <div class="text-danger"><?php echo $errors['email']; ?></div>
             <?php endif; ?>
@@ -53,4 +62,3 @@ $title = "Formulario";
         </div>
     </form>
 </div>
-
