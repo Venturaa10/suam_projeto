@@ -17,6 +17,10 @@ switch ($page) {
     case 'quiz':
         $pageContent = 'views/quiz.php'; // Página de quiz
         break;
+
+    case 'estatisticas':
+        $pageContent = 'views/estatisticas.php'; // Página de quiz
+        break;
         
     case 'home': 
     default:
@@ -24,7 +28,6 @@ switch ($page) {
         break;
 }
 
-// Inclui o layout, passando a página de conteúdo
 include __DIR__ . '/views/layout.php'; // Garante o caminho correto
 ?>
 
