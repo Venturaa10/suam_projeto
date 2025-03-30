@@ -9,6 +9,8 @@ class QuizController {
             exit(); // Garante que o código não continue
         }
     
+        session_start(); // Inicia a sessão
+
         $pontos = 0;
     
         // Respostas corretas
@@ -28,7 +30,7 @@ class QuizController {
         // Percorrer as respostas e calcular os pontos
         foreach ($respostasCorretas as $pergunta => $respostaCorreta) {
             if (isset($_POST[$pergunta]) && $_POST[$pergunta] === $respostaCorreta) {
-                $pontos += 10;
+                $pontos += 10; // 10 pontos por resposta correta
             }
         }
     
@@ -55,6 +57,10 @@ class QuizController {
         // Salvar pontuação no banco
         PontuacaoQuiz::save($estudante_id, $nome, $email, $cpf, $pontos);
     
+        // Armazena variaveis que serão utilizadas na página de feedback
+        $_SESSION['pontuacao'] = $pontos;
+        $_SESSION['nomeEstudante'] = $nome;
+
         // Redireciona para a página de feedback, após salvar a pontuação e as informações do estudante no banco de dados.
         header("Location: index.php?page=feedback");
         exit(); // Garante que o redirecionamento seja o último passo

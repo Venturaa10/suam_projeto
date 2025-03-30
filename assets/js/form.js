@@ -15,19 +15,24 @@ function formatCPF(cpf) {
     });
     
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Função que adicionar transição na mensagem de erro do formulario.
+    document.addEventListener("DOMContentLoaded", function () {
+        // Função que adiciona transição na mensagem de erro do formulário
+        function showErrorMessages() {
+            const errorMessages = document.querySelectorAll(".msg-error-form");
     
-    const errorMessages = document.querySelectorAll(".msg-error-form");
-
-    errorMessages.forEach((msg) => {
-        // Adiciona a classe para exibir com transição
-        msg.classList.add("show-error");
-
-        // Remove a mensagem após 4 segundos
-        setTimeout(() => {
-            msg.classList.remove("show-error");
-            setTimeout(() => msg.style.display = "none", 500); // Aguarda a transição para esconder
-        }, 4000); 
+            errorMessages.forEach((msg) => {
+                // Torna a mensagem visível
+                msg.style.display = "block";
+                setTimeout(() => msg.classList.add("show-error"), 50); // Pequeno delay para animação
+    
+                // Remove a mensagem após 4 segundos
+                setTimeout(() => {
+                    msg.classList.remove("show-error");
+                    setTimeout(() => msg.style.display = "none", 500); // Aguarda a transição para esconder
+                }, 4000);
+            });
+        }
+    
+        showErrorMessages(); // Executa ao carregar a página
     });
-});
+    

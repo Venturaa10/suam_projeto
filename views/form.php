@@ -20,7 +20,7 @@ unset($_SESSION['form_data']); // Limpa os dados do formulário após usá-los
         
         <!-- Nome -->
         <div class="mb-3">
-            <label for="nome" class="form-label">Nome:</label>
+            <label for="nome" class="form-label">Nome Completo:</label>
             <input class="form-control" type="text" maxlength="80" id="nome" name="nome" placeholder="Seu nome completo" 
                 value="<?php echo isset($formData['nome']) ? $formData['nome'] : ''; ?>">
             <?php if (isset($errors['nome'])): ?>
