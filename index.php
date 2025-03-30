@@ -15,11 +15,17 @@ switch ($page) {
         break;
 
     case 'quiz':
-        $pageContent = 'views/quiz.php'; // Página de quiz
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            require_once __DIR__ . '/controllers/QuizController.php';
+            $controller = new QuizController();
+            $controller->processarQuiz($_POST);
+        } else {
+            $pageContent = 'views/quiz.php'; // Página de quiz
+        }
         break;
 
-    case 'estatisticas':
-        $pageContent = 'views/estatisticas.php'; // Página de quiz
+    case 'feedback':
+        $pageContent = 'views/feedback.php'; // Página de quiz
         break;
         
     case 'home': 

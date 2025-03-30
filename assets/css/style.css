@@ -1,0 +1,84 @@
+/* Estilos gerais do formulário */
+form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo dos títulos de perguntas */
+form label {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Estilo das opções de resposta */
+form input[type="radio"] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Organizando as opções em uma linha */
+form div {
+    margin-bottom: 20px;
+}
+
+/* Estilo para as opções de resposta */
+form div label {
+    font-size: 1em;
+    color: #555;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+/* Botão de envio */
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Adicionando espaçamento entre as perguntas */
+form div:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+
+.msg-error-form {
+    display: inline-block;
+    /* background-color: #ff4d4d; */
+    color: #7c4141;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+/* Classe que ativa a exibição da mensagem */
+.show-error {
+    opacity: 1;
+    transform: translateY(0);
+}

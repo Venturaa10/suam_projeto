@@ -23,34 +23,35 @@ class Estudante {
      */
 
 
-    public static function save($nome, $idade, $cpf, $email) {
+     public static function save($nome, $idade, $cpf, $email) {
         $cpf = preg_replace('/\D/', '', $cpf); // Garantir que seja salvo somente os números no banco de dados.
 
         $conn = Database::getConnection();
         $stmt = $conn->prepare("INSERT INTO estudante (nome, idade, cpf, email) VALUES (?, ?, ?, ?)");
         $stmt->bind_param("ssss", $nome, $idade, $cpf, $email);
-        return $stmt->execute();
-    }
-}
-
-
-class PontuacaoQuiz {
-    public static function save($estudante_id, $pontos) {
-        $conn = Database::getConnection(); // Conexão com o banco
-
-        $stmt = $conn->prepare("INSERT INTO pontuacao (estudante_id, pontos) VALUES (?, ?)");
-        $stmt->bind_param("ii", $estudante_id, $pontos); 
-
-        return $stmt->execute();
+        
+        if ($stmt->execute()) {
+            // Retorna o id do estudante recém-criado
+            return $conn->insert_id;
+        } else {
+            return false;
+        }
     }
 
-    public static function getByStudent($estudante_id) {
+    public static function getEstudanteById($estudante_id) {
         $conn = Database::getConnection();
-
-        $stmt = $conn->prepare("SELECT * FROM pontuacao WHERE estudante_id = ?");
-        $stmt->bind_param("i", $estudante_id);
+        $stmt = $conn->prepare("SELECT id, nome, email, cpf FROM estudante WHERE id = ?");
+        $stmt->bind_param("i", $estudante_id); // Usando "i" para o tipo inteiro
         $stmt->execute();
-
-        return $stmt->get_result()->fetch_all(MYSQLI_ASSOC); // Retorna todas as pontuações do estudante
+        $result = $stmt->get_result();
+    
+        // Verifica se encontrou algum resultado
+        if ($result->num_rows > 0) {
+            return $result->fetch_assoc(); // Retorna os dados do estudante
+        } else {
+            return null; // Caso o estudante não seja encontrado
+        }
     }
+    
+    
 }

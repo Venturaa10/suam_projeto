@@ -59,38 +59,32 @@ class FormController {
                 $errors['email'] = $emailValidation;
             }
 
-            if (empty($errors)) {
-                /**
+
+                 if (empty($errors)) {
+                                    /**
                  * Se não houver erros armazenados armazenados, o objeto (estudante) é criado e salvo no banco de dados.
                  * O usuario é redirecionado para a pagina de quiz.
                  * 
                  * exit -> Serve para parar a execução do código, evitando execução de código adicional sem necessidade. 
                  */
-                
-
-                // $model = new Estudante();
-                // if ($model->save($nome, $idade, $cpf, $email)) {
-                //     // Em vez de redirecionar, você pode exibir uma mensagem de sucesso
-                //     include '../views/partials/header.php';
-                //     include '../views/partials/navbar.php';
-                //     include '../views/quiz.php'; 
-                //     include '../views/partials/footer.php';
-                //     exit();
-                // } else {
-                //     $errors['general'] = "Erro ao salvar os dados!";
-                // }
-
-                unset($_SESSION['form_data']); // Limpa os campos do input.
-                // unset($_SESSION['errors']); // Limpa as mensagens de erro, mas já que o campo foi validado, então não tem erro. Verificar linha depois.
-                header("Location: index.php?page=quiz");
-                exit();
-
-            } else {
-                $_SESSION['errors'] = $errors; // Persiste as mensagens de erro para continuar sendo exibida.
-                header("Location: index.php?page=form");
-                exit();
-
-            }
+                    $model = new Estudante();
+                    $estudante_id = $model->save($nome, $idade, $cpf, $email);
+        
+                    if ($estudante_id) {
+                        // Armazena o ID do estudante na sessão
+                        $_SESSION['estudante_id'] = $estudante_id;
+        
+                        // Redireciona para a página do quiz
+                        header("Location: index.php?page=quiz");
+                        exit();
+                    } else {
+                        $errors['general'] = "Erro ao salvar os dados!";
+                    }
+        
+                    $_SESSION['errors'] = $errors; // Persiste as mensagens de erro para continuar sendo exibida.
+                    header("Location: index.php?page=form");
+                    exit();
+                }
         }
     }
 }
