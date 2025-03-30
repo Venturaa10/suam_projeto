@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../models/FormModel.php';
+require_once __DIR__ . '/../models/EstudanteModel.php';
 require_once __DIR__ . '/../models/Validator.php';
 
 
@@ -61,7 +61,7 @@ class FormController {
 
 
                  if (empty($errors)) {
-                                    /**
+                /**
                  * Se não houver erros armazenados armazenados, o objeto (estudante) é criado e salvo no banco de dados.
                  * O usuario é redirecionado para a pagina de quiz.
                  * 
@@ -71,20 +71,24 @@ class FormController {
                     $estudante_id = $model->save($nome, $idade, $cpf, $email);
         
                     if ($estudante_id) {
-                        // Armazena o ID do estudante na sessão
+                        // Armazena o ID do estudante na sessão, esse ID será utilizado para referenciar o estudante no quiz.
                         $_SESSION['estudante_id'] = $estudante_id;
-        
+
+                        unset($_SESSION['form_data']); // Remove os dados do formulário da sessão após o redirecionamento.
+
                         // Redireciona para a página do quiz
                         header("Location: index.php?page=quiz");
+                        
                         exit();
                     } else {
                         $errors['general'] = "Erro ao salvar os dados!";
                     }
         
-                    $_SESSION['errors'] = $errors; // Persiste as mensagens de erro para continuar sendo exibida.
-                    header("Location: index.php?page=form");
-                    exit();
                 }
+
+                $_SESSION['errors'] = $errors; // Persiste as mensagens de erro para continuar sendo exibida.
+                header("Location: index.php?page=form");
+                exit();
         }
     }
 }

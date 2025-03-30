@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/../models/PontuacaoQuiz.php';
-require_once __DIR__ . '/../models/FormModel.php'; // Importar classe Estudante
+require_once __DIR__ . '/../models/EstudanteModel.php'; // Importar classe Estudante
 
 class QuizController {
     public static function processarQuiz() {
@@ -40,7 +40,8 @@ class QuizController {
             die("Erro: Estudante não encontrado.");
         }
     
-        // Recupera os dados do estudante a partir do ID
+        // Recupera os dados do estudante a partir do ID armazenado na sessão
+        // Isso é importante para garantir que o estudante correto seja referenciado no banco de dados e a sua pontuação no quiz.
         $estudante = Estudante::getEstudanteById($estudante_id);
         if ($estudante === null) {
             die("Erro: Estudante não encontrado no banco de dados.");
@@ -54,8 +55,8 @@ class QuizController {
         // Salvar pontuação no banco
         PontuacaoQuiz::save($estudante_id, $nome, $email, $cpf, $pontos);
     
-        // Redireciona para a página de feedback
-        header("Location: feedback.php");
+        // Redireciona para a página de feedback, após salvar a pontuação e as informações do estudante no banco de dados.
+        header("Location: index.php?page=feedback");
         exit(); // Garante que o redirecionamento seja o último passo
     }
     

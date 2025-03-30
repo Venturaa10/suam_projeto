@@ -39,6 +39,12 @@ class Estudante {
     }
 
     public static function getEstudanteById($estudante_id) {
+        /**
+         * Função responsvél por pegar o Id do estudante recem criado e retornar os dados do estudante.
+         * @param int $estudante_id - ID do estudante a ser recuperado.
+         * 
+         * O objetivo é retornar os dados do estudante a partir do ID, pois será utilizado no Contoller do Quiz, para salvar a pontução desse mesmo estudante no banco de dados.
+         */
         $conn = Database::getConnection();
         $stmt = $conn->prepare("SELECT id, nome, email, cpf FROM estudante WHERE id = ?");
         $stmt->bind_param("i", $estudante_id); // Usando "i" para o tipo inteiro

@@ -1,35 +1,4 @@
 <?php
-session_start(); // Inicia a sessão para poder acessar os dados da sessão
-
-// Verifica se a pontuação está disponível na sessão
-$pontos = $_SESSION['pontuacao'] ?? 0;
-
-// Definir a mensagem com base na pontuação
-if ($pontos >= 90) {
-    $mensagem = "Excelente! Você acertou todas as questões!";
-} elseif ($pontos >= 70) {
-    $mensagem = "Muito bem! Você teve um ótimo desempenho!";
-} elseif ($pontos >= 50) {
-    $mensagem = "Bom trabalho! Mas ainda há espaço para melhorar!";
-} else {
-    $mensagem = "Você pode melhorar! Continue praticando!";
-}
-
-// Limpar a pontuação da sessão para não ficar armazenada em outros lugares
-unset($_SESSION['pontuacao']);
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback do Quiz</title>
-</head>
-<body>
-    <h1>Feedback do Quiz</h1>
-    <p>Sua pontuação: <?= $pontos ?> pontos</p>
-    <p><?= $mensagem ?></p>
-    <a href="index.php">Voltar ao início</a>
-</body>
-</html>
+Aqui é o feedback

@@ -15,10 +15,10 @@ switch ($page) {
         break;
 
     case 'quiz':
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            require_once __DIR__ . '/controllers/QuizController.php';
-            $controller = new QuizController();
-            $controller->processarQuiz($_POST);
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') { // Verifica se o formulário foi enviado
+            require_once __DIR__ . '/controllers/QuizController.php'; // Importa o controlador do quiz.
+            $controller = new QuizController(); // Instancia o controlador do quiz.
+            $controller->processarQuiz($_POST); // Chama o método para processar o quiz.
         } else {
             $pageContent = 'views/quiz.php'; // Página de quiz
         }
