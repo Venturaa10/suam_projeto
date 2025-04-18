@@ -25,7 +25,15 @@ switch ($page) {
         break;
 
     case 'estatisticas':
-        $pageContent = 'views/estatisticas.php'; // Página de quiz
+        require_once __DIR__ . '/controllers/EstatisticaController.php';
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            EstatisticaController::processarConsultaPorCPF($_POST);
+            header('Location: index.php?page=estatisticas');
+            exit;
+        } else {
+            $pageContent = 'views/estatisticas.php';
+        }
         break;
         
     case 'feedback':

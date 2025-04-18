@@ -30,7 +30,7 @@ if ($pontos == 100) {
                     <div class="card-body text-center">
                         <h1 class="text-primary fw-bold">Resultado do Quiz</h1>
                         <h5 class="text-muted"><?= $nomeEstudante ?></h5>
-                        <p class="fs-4">Sua pontuação: <span class="fw-bold"><?= $pontos ?> pontos</span></p>
+                        <p class="fs-4">Sua pontuação: <span class="fw-bold"><?= number_format($pontos, 2) ?> pontos</span></p>
                         <p class="lead"><?= $mensagem ?></p>
                         <a href="index.php" class="btn btn-primary mt-3">Voltar ao início</a>
                     </div>
