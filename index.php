@@ -24,10 +24,14 @@ switch ($page) {
         }
         break;
 
+    case 'estatisticas':
+        $pageContent = 'views/estatisticas.php'; // Página de quiz
+        break;
+        
     case 'feedback':
         $pageContent = 'views/feedback.php'; // Página de quiz
         break;
-        
+
     case 'home': 
     default:
         $pageContent = 'views/home.php'; // Página inicial

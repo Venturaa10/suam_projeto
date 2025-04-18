@@ -10,6 +10,7 @@
     <!-- <link rel="stylesheet" href="assets/css/form.css"> -->
     <!-- <link rel="stylesheet" href="assets/css/quiz.css"> -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/estatisticas.css">
 </head>
 <body>
 
