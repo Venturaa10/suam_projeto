@@ -78,7 +78,6 @@ document.getElementById('form-cpf').addEventListener('submit', async function (e
         if (json.status === 'ok') {
             console.log('CPF encontrado no banco de dados.')
             resultado.innerHTML = `
-                <p><strong>Nome:</strong> ${json.dados.nome}</p>
                 <p><strong>CPF:</strong> ${cpf}</p>
                 <p><strong>Quantidade de vezes que fez o quiz:</strong> ${json.dados.quantidade}</p>
                 <p><strong>Média de pontuação:</strong> ${parseFloat(json.dados.media).toFixed(2)}</p>

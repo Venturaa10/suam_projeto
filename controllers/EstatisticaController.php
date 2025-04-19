@@ -11,7 +11,7 @@ class EstatisticaController {
 
     public static function obterEstatisticaPorCPF($cpf) {
         $conn = Database::getConnection();
-        $stmt = $conn->prepare("SELECT nome, COUNT(*) as quantidade, AVG(pontos) as media FROM pontuacao WHERE cpf = ? GROUP BY nome LIMIT 1");
+        $stmt = $conn->prepare("SELECT COUNT(*) as quantidade, AVG(pontos) as media FROM pontuacao WHERE cpf = ?");
         $stmt->bind_param("s", $cpf);
         $stmt->execute();
         
