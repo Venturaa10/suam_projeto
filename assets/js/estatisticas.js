@@ -1,3 +1,33 @@
+fetch('api/estatisticas.php')
+  .then(res => res.json())
+  .then(data => {
+    console.log(`Dados carregados com sucesso.`)
+    const totalParticipantes = document.querySelector('#total-participantes');
+    const mediaPontos = document.querySelector('#media-pontos');
+
+    // Removendo o spinner antes de atualizar o conteúdo
+    const spinnerTotal = totalParticipantes.querySelector('.spinner');
+    const spinnerMedia = mediaPontos.querySelector('.spinner');
+
+    if (spinnerTotal) spinnerTotal.remove();  // Remove o spinner do total de participantes
+    if (spinnerMedia) spinnerMedia.remove();  // Remove o spinner da média de pontos
+
+    // Atualizando os valores, adicionando texto diretamente no conteúdo do elemento
+    totalParticipantes.innerHTML = `${data.total_resultados}`;
+    mediaPontos.innerHTML = `${parseFloat(data.media_pontos).toFixed(2)}`;
+
+    // Caso queira adicionar uma animação ou transição para os valores
+    totalParticipantes.classList.add('loaded');
+    mediaPontos.classList.add('loaded');
+  })
+  .catch(() => {
+    // Caso haja erro, mostrar uma mensagem informando
+    console.log('Erro ao carregar os dados.')
+    document.querySelector('#total-participantes').textContent = 'Erro ao carregar dados';
+    document.querySelector('#media-pontos').textContent = 'Erro ao carregar dados';
+  });
+
+
 function mostrarFormulario() {
     const form = document.getElementById('form-cpf');
     const cpfInput = document.getElementById('cpf');

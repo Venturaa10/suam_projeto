@@ -11,9 +11,22 @@ $estatisticas = EstatisticaController::obterEstatisticas();
 
 
 <div class="stats-container">
-    <h2 class="stats-title">📊 Estatísticas do Quiz</h2>
-    <p class="stat-item">Total de participantes: <span class="stat-value"><?= $estatisticas['total_resultados'] ?></span></p>
-    <p class="stat-item">Média de pontos: <span class="stat-value"><?= number_format($estatisticas['media_pontos'],2 ) ?></span></p>
+<h2 class="stats-title">📊 Estatísticas do Quiz</h2>
+<div id="estatisticas">
+<p class="stat-item">Total de participantes:
+  <span class="stat-value" id="total-participantes">
+    <span class="spinner"></span> Carregando...
+  </span>
+</p>
+
+<p class="stat-item">Média de pontos:
+  <span class="stat-value" id="media-pontos">
+    <span class="spinner"></span> Carregando...
+  </span>
+</p>
+
+</div>  
+
 
     <div class="cpf-section">
         <button class="mostrar-form-btn" onclick="mostrarFormulario()">Consultar Minha Média</button>
