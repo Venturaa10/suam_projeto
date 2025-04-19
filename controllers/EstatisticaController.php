@@ -17,34 +17,34 @@ class EstatisticaController {
         
         $resultado = $stmt->get_result()->fetch_assoc();
         if ($resultado && $resultado['quantidade'] > 0) {
+            // Retornou o resultado para a api.
             return $resultado;
         }
-
         
         return null;
     }
 
-    public static function processarConsultaPorCPF(array $dados)
-{
-    if (!isset($dados['cpf'])) {
-        $_SESSION['mensagem'] = "CPF não fornecido.";
-        return;
-    }
+//     public static function processarConsultaPorCPF(array $dados)
+// {
+//     if (!isset($dados['cpf'])) {
+//         $_SESSION['mensagem'] = "CPF não fornecido.";
+//         return;
+//     }
 
-    $cpf = preg_replace('/\D/', '', $dados['cpf']);
+//     $cpf = preg_replace('/\D/', '', $dados['cpf']);
 
-    $resultado = self::obterEstatisticaPorCPF($cpf);
+//     $resultado = self::obterEstatisticaPorCPF($cpf);
 
-    if ($resultado) {
-        // Encontrou o cpf informado no banco, retorna o cpf com os dados do estudante.
-        $_SESSION['resultado_individual'] = $resultado;
-        $_SESSION['cpf_digitado'] = $dados['cpf']; // CPF com formatação original
-    } else {
-        // Não foi possivel encontrar o cpf informado no banco de dados de estudante.
-        $_SESSION['mensagem'] = "⚠️ Nenhum resultado encontrado para este CPF.";
-        $_SESSION['cpf_digitado'] = $dados['cpf'];
-    }
-}
+//     if ($resultado) {
+//         // Encontrou o cpf informado no banco, retorna o cpf com os dados do estudante.
+//         $_SESSION['resultado_individual'] = $resultado;
+//         $_SESSION['cpf_digitado'] = $dados['cpf']; // CPF com formatação original
+//     } else {
+//         // Não foi possivel encontrar o cpf informado no banco de dados de estudante.
+//         $_SESSION['mensagem'] = "⚠️ Nenhum resultado encontrado para este CPF.";
+//         $_SESSION['cpf_digitado'] = $dados['cpf'];
+//     }
+// }
 
 }
 ?>

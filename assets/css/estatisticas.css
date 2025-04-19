@@ -82,3 +82,16 @@
 .mostrar-form-btn:hover {
     background-color: #219150;
 }
+
+.msg-error-form-estatisticas {
+    margin-top: 20px;
+    display: block; /* ou block */
+    color: #7c4141;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 14px;
+    opacity: 1;
+    transform: translateY(-10px);
+    transition: opacity 1s ease, transform 0.1s ease;
+}
+

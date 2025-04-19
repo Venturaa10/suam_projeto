@@ -64,7 +64,6 @@ form div:not(:last-child) {
 
 
 .msg-error-form {
-    display: inline-block;
     /* background-color: #ff4d4d; */
     color: #7c4141;
     font-weight: bold;
