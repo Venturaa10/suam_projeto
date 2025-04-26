@@ -18,10 +18,10 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Temas</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="navegacao.php">Navegação</a></li>
-            <li><a class="dropdown-item" href="phishing.php">Phishing</a></li>
-            <li><a class="dropdown-item" href="privacidade.php">Privacidade</a></li>
-            <li><a class="dropdown-item" href="senhas.php">Senhas</a></li>
+            <li><a class="dropdown-item" href="index.php?page=navegacao">Navegação</a></li>
+            <li><a class="dropdown-item" href="index.php?page=phishing">Phishing</a></li>
+            <li><a class="dropdown-item" href="index.php?page=privacidade">Privacidade</a></li>
+            <li><a class="dropdown-item" href="index.php?page=senhas">Senhas</a></li>
           </ul>
         </li>
       </ul>

@@ -1,4 +1,10 @@
 <?php
+
+require_once __DIR__ . '/controllers/FormController.php';
+require_once __DIR__ . '/controllers/QuizController.php';
+require_once __DIR__ . '/controllers/EstatisticaController.php';
+
+
 session_start();
 
 // Define qual página carregar, por padrão será a home
@@ -9,7 +15,6 @@ switch ($page) {
     case 'form':
         unset($_SESSION['estudante_id']); // Limpa id antigo (evita acesso não intencional)
 
-        require_once __DIR__ . '/controllers/FormController.php';
         $controller = new FormController();
         $controller->processForm(); // Chama o método para processar o formulário       
         $pageContent = 'views/form.php'; // Define o conteúdo da página
@@ -26,7 +31,6 @@ switch ($page) {
         }
     
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            require_once __DIR__ . '/controllers/QuizController.php';
             $controller = new QuizController();
             $controller->processarQuiz($_POST);
         } else {
@@ -35,7 +39,6 @@ switch ($page) {
         break;
 
     case 'estatisticas':
-        require_once __DIR__ . '/controllers/EstatisticaController.php';
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // EstatisticaController::processarConsultaPorCPF($_POST);
@@ -56,6 +59,23 @@ switch ($page) {
         unset($_SESSION['estudante_id']); // Limpa id antigo (evita acesso não intencional)
 
         $pageContent = 'views/feedback.php'; // Página de quiz
+        break;
+
+    case 'navegacao':
+        $pageContent = 'views/navegacao.php'; // Página de navegação
+        break;
+
+    case 'phishing':
+        $pageContent = 'views/phishing.php'; // Página de phishing
+        break;
+
+    case 'privacidade':
+        $pageContent = 'views/privacidade.php'; // Página de phishing
+        break;
+
+    
+    case 'senhas':
+        $pageContent = 'views/senhas.php'; // Página de phishing
         break;
 
     case 'home': 
