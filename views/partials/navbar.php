@@ -16,7 +16,7 @@
             <a class="nav-link" href="index.php?page=form">Quiz</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Temas</a>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Temas</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="index.php?page=navegacao">Navegação</a></li>
             <li><a class="dropdown-item" href="index.php?page=phishing">Phishing</a></li>

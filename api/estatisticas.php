@@ -1,6 +1,6 @@
 <?php
 
-require_once 'controllers/EstatisticaController.php';
+require_once __DIR__ . '/../controllers/EstatisticaController.php';
 header('Content-Type: application/json');
 
 $estatisticas = EstatisticaController::obterEstatisticas();
