@@ -1,60 +1,107 @@
 
 <main>
-    <section>
-      <h1>Navegação Segura na Web</h1>
-      <h3>
-        O que são ameaças cibernéticas?
-      </h3>
+  <section>
 
-      <p>
-        Ameaças cibernéticas são perigos virtuais que podem comprometer seus dados, invadir dispositivos ou prejudicar sua privacidade. Entre as mais comuns estão:
-      </p>
-      <ul>
-        <li>Vírus de computador: programas que se espalham e causam danos.</li>
-        <li>Phishing: golpes que tentam enganar você para roubar senhas ou dados bancários.</li>
-        <li>Roubo de identidade: quando alguém usa suas informações pessoais para cometer fraudes.</li>
-      </ul>
+    <div class="col-lg-4 mx-auto">
+      <h1 class="display-7 fw-bold text-body-emphasis">Navegação Segura na Web</h1>
+    </div>
 
-      <h3>Por que manter seu sistema atualizado?</h3>
-      <p>
-        Muita gente ignora as atualizações de sistema, mas elas corrigem falhas de segurança que podem ser exploradas por hackers.
+    <br>
+    <br>
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">O que são ameaças cibernéticas?</h2>
+        <br>
+        <p class="lead">Ameaças cibernéticas são perigos virtuais que podem comprometer seus dados, invadir dispositivos ou prejudicar sua privacidade. Entre as mais comuns estão:</p>
+        <br>
+        <ul>
+          <li><p class="lead text-body-emphasis"><mark>Vírus de computador</mark>: programas que se espalham e causam danos.</p><br><br></li>
+          <li><p class="lead text-body-emphasis"><mark>Phishing</mark>: golpes que tentam enganar você para roubar senhas ou dados bancários.</p><br><br></li>
+          <li><p class="lead text-body-emphasis"><mark>Roubo de identidade</mark>: quando alguém usa suas informações pessoais para cometer fraudes.</p><br></li>
+        </ul>
+      </div>
+      <div class="col-md-5">
+        <img src="./assets/img/ciberseguranca.jpg" alt="" width="700" height="500" >
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="col d-flex align-items-start"> 
+      <div>
+        <h3 class="fs-2 text-body-emphasis">Por que manter seu sistema atualizado?</h3>
+        <p class="lead mb-3">Muita gente ignora as atualizações de sistema, mas elas corrigem falhas de segurança que podem ser exploradas por hackers.
         Manter seus programas atualizados é como fechar as portas que poderiam ser usadas para ataques. É essencial manter seus navegadores e antivírus atualizados, além de evitar clicar em anúncios chamativos ou sensacionalistas.
-      </p>
+        </p>
+      </div>
+    </div>
 
-      <h3>Como saber se um site é seguro?</h3>
-      <p>
-        Antes de comprar ou fornecer dados em um site, observe dois sinais importantes:
-      </p>
-      <ul>
-        <li>O endereço deve começar com https:// (o “s” significa seguro).</li>
-        <li>Um ícone de cadeado deve aparecer ao lado do endereço no navegador.</li>
-      </ul>
-      <strong>Obs: Cuidado com sites que têm muitos pop-ups, erros ou não mostram informações de contato.</strong>
+    <br>
 
-      <h3>Como se proteger em compras online?</h3>
-      <ul>
-        <li>Dê preferência a plataformas conhecidas e seguras.</li>
-        <li>Use serviços de pagamento confiáveis, que oferecem criptografia e proteção contra fraudes (ex: PayPal, Mercado Pago).</li>
-        <li>Nunca compartilhe os dados do seu cartão por e-mail ou mensagem.</li>
-      </ul>
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">Como saber se um site é seguro?</h2>
+        <br>
+        <p class="lead">Antes de comprar ou fornecer dados em um site, observe dois sinais importantes:</p>
+        <br>
+        <ul>
+          <li><p class="lead text-body-emphasis">O endereço deve começar com https:// (o “s” significa seguro).</p><br><br></li>
+          <li><p class="lead text-body-emphasis">Um ícone de cadeado deve aparecer ao lado do endereço no navegador.</p><br><br></li>         
+        </ul>
+        <h5><strong>Obs: Cuidado com sites que têm muitos pop-ups, erros ou não mostram informações de contato.</strong></h5>
+      </div>
+      <div class="col-md-5">
+        <img src="./assets/img/siteseguro.jpg" alt="" width="700" height="400" >
+      </div>
+    </div>
+    
+    <br>
+    <br>
+    <br>
 
-      <h3>Cuidado com o Wi-Fi público</h3>
-      <p>
-        Redes públicas, como de shoppings ou cafés, não são seguras. Alguém mal-intencionado pode interceptar seus dados, especialmente se você acessar:
-      </p>
-      <ul>
-        <li>Bancos</li>
-        <li>E-mails</li>
-        <li>Compras online</li>
-      </ul>
-      
-      <p>
-        Esse tipo de golpe é chamado de “Ataque Man-in-the-Middle”, onde o invasor se posiciona entre você e o site que está acessando.
-      </p>
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">Como se proteger em compras online?</h2>
+        <br>
+        <p class="lead">Dicas detalhadas para comprar online com segurança:</p>
+        <br>
+        <ul>
+          <li><p class="lead text-body-emphasis">Dê preferência a plataformas conhecidas e seguras.</p><br><br></li>
+          <li><p class="lead text-body-emphasis">Use serviços de pagamento confiáveis, que oferecem criptografia e proteção contra fraudes (ex: PayPal, Mercado Pago).</p><br><br></li>
+          <li><p class="lead text-body-emphasis">Nunca compartilhe os dados do seu cartão por e-mail ou mensagem.</p><br></li>
+        </ul>
+      </div>
+      <div class="col-md-5">
+        <img src="./assets/img/compras.jpeg" alt="" width="600" height="400" >
+      </div>
+    </div>
+    
+    <br>
+    <br>
 
-      <h3>Assista ao vídeo:</h3>
+    <div class="col d-flex align-items-start"> 
+      <div>
+        <h3 class="fs-2 text-body-emphasis">Por que manter seu sistema atualizado?</h3>
+        <br>
+        <p class="lead mb-3">
+          Redes públicas, como de shoppings ou cafés, não são seguras. Alguém mal-intencionado pode interceptar seus dados, especialmente se você acessar:
+        </p>
+        <ul>
+          <li><p class="lead text-body-emphasis">Bancos</p></li>
+          <li><p class="lead text-body-emphasis">E-mails</p></li>
+          <li><p class="lead text-body-emphasis">Compras online</p></li>
+        </ul>         
+      </div>
+    </div>
 
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/SBpQ3bajC_A?si=dzvOh3YZUEWDxKiB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h5><strong>Esse tipo de golpe é chamado de “Ataque Man-in-the-Middle”, onde o invasor se posiciona entre você e o site que está acessando.</strong></h5>
+    <br>
+       
+    <h3><strong>Assista ao vídeo:</strong></h3>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/SBpQ3bajC_A?si=dzvOh3YZUEWDxKiB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
     </section>
   </main>
