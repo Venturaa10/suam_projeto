@@ -24,6 +24,18 @@
             <li><a class="dropdown-item" href="index.php?page=senhas">Senhas</a></li>
           </ul>
         </li>
+        <li>
+            <p>ㅤㅤㅤㅤ</p>
+        </li>
+        <li>
+          <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+              <i class="fas fa-moon" ></i>
+              <i class="fas fa-sun"></i>
+              <div class="ball"></div>          
+            </label>
+          <br>
+        </li>
       </ul>
     </div>
   </div>
