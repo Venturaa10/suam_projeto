@@ -2,7 +2,7 @@
   <section>
 
   <div class="col-lg-4 mx-auto">
-      <h2 class="display-7 fw-bold text-body-emphasis">Senhas Seguras</h2>
+    <h2 class="display-7 fw-bold ">Senhas Seguras</h2>
   </div>
   <br>
   <p class="lead">Senhas são como chaves que protegem nossas contas e informações pessoais. Se alguém descobre sua senha, pode acessar seus e-mails, redes sociais, bancos e muito mais. Por isso, é fundamental criar senhas que sejam difíceis de adivinhar, até mesmo por pessoas que conhecem você.</p>
@@ -21,9 +21,9 @@
         <p class="lead">Para manter suas senhas seguras e longe de olhares indesejados, evite algumas práticas comuns que facilitam o furto, como:</p>
         <br>
         <ul>
-          <li><p class="lead text-body-emphasis">Não use a mesma senha em vários sites. Se um deles for invadido, os outros ficam vulneráveis.</p><br></li>
-          <li><p class="lead text-body-emphasis">Evite usar dados pessoais, como seu nome, data de nascimento ou nome de pets. Isso pode ser facilmente descoberto por quem te conhece ou pelas redes sociais.</p><br></li>
-          <li><p class="lead text-body-emphasis">Não use palavras comuns como "senha", "123456", "admin", ou "qwerty". Elas são as primeiras que os hackers tentam.</p><br></li>
+          <li><p class="lead ">Não use a mesma senha em vários sites. Se um deles for invadido, os outros ficam vulneráveis.</p><br></li>
+          <li><p class="lead ">Evite usar dados pessoais, como seu nome, data de nascimento ou nome de pets. Isso pode ser facilmente descoberto por quem te conhece ou pelas redes sociais.</p><br></li>
+          <li><p class="lead ">Não use palavras comuns como "senha", "123456", "admin", ou "qwerty". Elas são as primeiras que os hackers tentam.</p><br></li>
         </ul>
 
         <h5 class="lead lh-2">Dica extra:</h5>

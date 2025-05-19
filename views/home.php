@@ -13,14 +13,14 @@
     <section>
 
     <div class="col-lg-4 mx-auto">
-    <h1 class="display-7 fw-bold text-body-emphasis">Bem-vindos ao nosso site!</h1>
+    <h1 class="display-7 ">Bem-vindos ao nosso site!</h1>
     </div>
     <p class="lead mb-4">Este site é dedicado a ajudar pessoas leigas a entenderem os principais riscos ao navegar na internet e como se proteger de forma simples e eficaz.</p>
 
     <div class="col d-flex align-items-start">
       <img src="./assets/img/segurancadigital.png" alt="" width="45em" height="45em" > 
       <div>
-        <h3 class="fs-2 text-body-emphasis">O que é segurança na internet?</h3>
+        <h3 class="fs-2 ">O que é segurança na internet?</h3>
         <p class="lead mb-3">Podemos entender como Segurança na Internet todas os cuidados que devemos ter para proteger as coisas que fazem parte da internet como a infraestrutura, que podem ser nossos computadores e as informações, que são as mais atacadas pelos cibercriminosos.</p>
       </div>
     </div>
@@ -33,12 +33,12 @@
         <p class="lead">Algumas das coisas que os cibercriminosos tentam fazer pela Internet são:</p>
         <br>
         <ul>
-          <li><p class="lead text-body-emphasis">Roubar informações</p></li>
-          <li><p class="lead text-body-emphasis" >Corromper informações</p></li>
-          <li><p class="lead text-body-emphasis">Atacar sistemas ou equipamentos</p></li>
-          <li><p class="lead text-body-emphasis">Roubar identidade</p></li>
-          <li><p class="lead text-body-emphasis">Vender dados pessoais</p></li>
-          <li><p class="lead text-body-emphasis">Roubar dinheiro</p></li>
+          <li><p class="lead ">Roubar informações</p></li>
+          <li><p class="lead " >Corromper informações</p></li>
+          <li><p class="lead ">Atacar sistemas ou equipamentos</p></li>
+          <li><p class="lead ">Roubar identidade</p></li>
+          <li><p class="lead ">Vender dados pessoais</p></li>
+          <li><p class="lead ">Roubar dinheiro</p></li>
         </ul>
       </div>
       <div class="col-md-5">
@@ -48,7 +48,7 @@
 
     <div class="col d-flex align-items-start"> 
       <div>
-        <h3 class="fs-2 text-body-emphasis">Como evitar?</h3>
+        <h3 class="fs-2 ">Como evitar?</h3>
         <p class="lead mb-3">Se alguém lida com muitas informações e possui vários equipamentos, como no caso das empresas, é melhor solicitar ajuda de profissionais que trabalham com segurança na Internet.</p>
         <p class="lead mb-3">Por outro lado, como usuário comuns, podemos adotar várias medidas preventivas, tais como manter ativos e atualizados os antivírus em nossos aparelhos que acessam à Internet, evitar fazer transações financeiras em redes abertas ou em computadores públicos e verificar os arquivos anexos das mensagens de estranhos, evitando baixá-los se não tiver certeza do seu conteúdo.</p>
       </div>
@@ -57,7 +57,7 @@
     <br>
 
 
-    <h3 class="fs-2 text-body-emphasis">O que vão aprender aqui?</h3>
+    <h3 class="fs-2 ">O que vão aprender aqui?</h3>
     <br>
     <br>
 
