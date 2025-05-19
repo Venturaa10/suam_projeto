@@ -1,13 +1,13 @@
 <main>
   <section>
 
-  <div class="col-lg-4 mx-auto">
+    <div class="col-lg-4 mx-auto">
       <h3 class="display-7 fw-bold text-body-emphasis">Como proteger sua privacidade na internet</h3>
-  </div>
-  <br>
-  <br>
+    </div>
+    <br>
+    <br>
 
-  <div class="col d-flex align-items-start"> 
+    <div class="col d-flex align-items-start"> 
       <div>
         <h3 class="fs-2 text-body-emphasis">O que é privacidade online?</h3>
         <br>
@@ -82,9 +82,10 @@
 
       
     <h3 class="fs-2 text-body-emphasis">Assista ao vídeo:</h3>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/c4OmEbYkfa4?si=1KOwB960qK62x1ZL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/HYISzVAKpTo?si=X-9s3Ax8YJZoVKi8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/mdmLKq3IT8k?si=luOTFy3SGPb9tKom" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/c4OmEbYkfa4?si=1KOwB960qK62x1ZL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/HYISzVAKpTo?si=X-9s3Ax8YJZoVKi8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/mdmLKq3IT8k?si=luOTFy3SGPb9tKom" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       
   </section>
 </main>
