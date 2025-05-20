@@ -81,7 +81,7 @@
       <br>
 
       
-    <h3 class="fs-2 text-body-emphasis">Assista ao vídeo:</h3>
+    <h3 class="fs-2 ">Assista ao vídeo:</h3>
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/c4OmEbYkfa4?si=1KOwB960qK62x1ZL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/HYISzVAKpTo?si=X-9s3Ax8YJZoVKi8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

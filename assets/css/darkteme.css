@@ -1,5 +1,5 @@
 body {
-    background-color: #fafafa;
+    
     transition: background 0.2s linear;
 }
 
@@ -24,12 +24,12 @@ body.dark {
     justify-content: space-between;
     
   
-    padding: 5px;
+    padding: 2px;
     position: relative;
-    height: 15px;
-    width: 45px;
+    height: 27px;
+    width: 52px;
     transform: scale(1.5);
-  
+    bottom: 5px;
 }
 
 .label .ball {
@@ -38,8 +38,8 @@ body.dark {
     position: absolute;
     top: 1px;
     left: 1px;
-    height: 15px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
     transform: translateX(0px);
     transition: transform 0.2s linear;
 }
@@ -48,12 +48,13 @@ body.dark {
     transform: translateX(24px);
 }
   
-.fa-moon {
-    color: #f1c40f;
+.sun {
+    bottom: 20px;
 }
-  
-.fa-sun {
-    color: #f39c12;
+
+.moon {
+    top: 15px;
+    
 }
 
 section {
