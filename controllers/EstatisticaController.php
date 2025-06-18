@@ -5,52 +5,52 @@ class EstatisticaController {
 
     // Configuração para o banco de dados MySQL
 
-    // public static function obterEstatisticas() {
-    //     $conn = Database::getConnection();
-    //     $sql = "SELECT COUNT(*) as total_resultados, AVG(pontos) as media_pontos FROM pontuacao";
-    //     $result = $conn->query($sql);
-    //     return $result->fetch_assoc();
-    // }
+    public static function obterEstatisticas() {
+        $conn = Database::getConnection();
+        $sql = "SELECT COUNT(*) as total_resultados, AVG(pontos) as media_pontos FROM pontuacao";
+        $result = $conn->query($sql);
+        return $result->fetch_assoc();
+    }
 
     
-    // public static function obterEstatisticaPorCPF($cpf) {
-    //     $conn = Database::getConnection();
-    //     $stmt = $conn->prepare("SELECT COUNT(*) as quantidade, AVG(pontos) as media FROM pontuacao WHERE cpf = ?");
-    //     $stmt->bind_param("s", $cpf);
-    //     $stmt->execute();
+    public static function obterEstatisticaPorCPF($cpf) {
+        $conn = Database::getConnection();
+        $stmt = $conn->prepare("SELECT COUNT(*) as quantidade, AVG(pontos) as media FROM pontuacao WHERE cpf = ?");
+        $stmt->bind_param("s", $cpf);
+        $stmt->execute();
         
-    //     $resultado = $stmt->get_result()->fetch_assoc();
-    //     if ($resultado && $resultado['quantidade'] > 0) {
-    //         // Retornou o resultado para a api.
-    //         return $resultado;
-    //     }
+        $resultado = $stmt->get_result()->fetch_assoc();
+        if ($resultado && $resultado['quantidade'] > 0) {
+            // Retornou o resultado para a api.
+            return $resultado;
+        }
         
-    //     return null;
-    // }
+        return null;
+    }
 
 
     // Configuração para o banco de dados PostgreSQL
 
-    public static function obterEstatisticas() {
-        $conn = Database::getConnection();
-        $sql = "SELECT COUNT(*) as total_resultados, AVG(pontos) as media_pontos FROM pontuacao";
-        $stmt = $conn->query($sql); // Retorna um PDOStatement
-        return $stmt->fetch(PDO::FETCH_ASSOC); // Retorna array associativo
-    }
+    // public static function obterEstatisticas() {
+    //     $conn = Database::getConnection();
+    //     $sql = "SELECT COUNT(*) as total_resultados, AVG(pontos) as media_pontos FROM pontuacao";
+    //     $stmt = $conn->query($sql); // Retorna um PDOStatement
+    //     return $stmt->fetch(PDO::FETCH_ASSOC); // Retorna array associativo
+    // }
 
-    public static function obterEstatisticaPorCPF($cpf) {
-        $conn = Database::getConnection();
-        $stmt = $conn->prepare("SELECT COUNT(*) as quantidade, AVG(pontos) as media FROM pontuacao WHERE cpf = :cpf");
-        $stmt->bindValue(':cpf', $cpf, PDO::PARAM_STR);
-        $stmt->execute();
+    // public static function obterEstatisticaPorCPF($cpf) {
+    //     $conn = Database::getConnection();
+    //     $stmt = $conn->prepare("SELECT COUNT(*) as quantidade, AVG(pontos) as media FROM pontuacao WHERE cpf = :cpf");
+    //     $stmt->bindValue(':cpf', $cpf, PDO::PARAM_STR);
+    //     $stmt->execute();
     
-        $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
-        if ($resultado && $resultado['quantidade'] > 0) {
-            return $resultado;
-        }
+    //     $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+    //     if ($resultado && $resultado['quantidade'] > 0) {
+    //         return $resultado;
+    //     }
     
-        return null;
-    }
+    //     return null;
+    // }
     
 
 //     public static function processarConsultaPorCPF(array $dados)
