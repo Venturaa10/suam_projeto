@@ -1,26 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Segurança na Web</title>
-  <link rel="stylesheet" href="./assets/css/home.css">
-  <link rel="stylesheet" href="./assets/css/darkteme.css">
 
-</head>
-<body>
-  
-
-  <main>
+  <main >
     <section>
 
-    <div class="col-lg-4 mx-auto">
+    <div class="col-lg-4 ">
     <h1 class="display-7 ">Bem-vindos ao nosso site!</h1>
     </div>
     <p class="lead mb-4">Este site é dedicado a ajudar pessoas leigas a entenderem os principais riscos ao navegar na internet e como se proteger de forma simples e eficaz.</p>
 
     <div class="col d-flex align-items-start">
-      <img src="./assets/img/segurancadigital.png" alt="" width="45em" height="45em" > 
+      <img src="./assets/img/segurancadigital.png" alt="" width="45em" height="45em" display="flex" > 
       <div>
         <h3 class="fs-2 ">O que é segurança na internet?</h3>
         <p class="lead mb-3">Podemos entender como Segurança na Internet todas os cuidados que devemos ter para proteger as coisas que fazem parte da internet como a infraestrutura, que podem ser nossos computadores e as informações, que são as mais atacadas pelos cibercriminosos.</p>
@@ -30,7 +18,7 @@
     <br>
     
     <div class="row featurette">
-      <div class="col-md-7">
+      <div class="col-md-5">
         <h2 class="featurette-heading fw-normal lh-1">Os principais riscos da Internet.</h2>
         <p class="lead">Algumas das coisas que os cibercriminosos tentam fazer pela Internet são:</p>
         <br>
@@ -43,9 +31,11 @@
           <li><p class="lead ">Roubar dinheiro</p></li>
         </ul>
       </div>
+      <br>
       <div class="col-md-5">
-        <img src="./assets/img/hacking.png" alt="" width="700" height="500" >
+        <img src="./assets/img/hacking.png" alt="" class="img-alaing"  > 
       </div>
+  
     </div>
 
     <div class="col d-flex align-items-start"> 
@@ -99,5 +89,3 @@
 
     </section>
   </main>
-</body>
-</html>

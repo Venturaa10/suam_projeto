@@ -1,0 +1,14 @@
+
+.img-alaing {
+    width: 800px;
+    height: 500px;
+    max-width: 100%;
+    display: flex;
+}
+
+img {
+    max-width: 100%;
+    display: flex;
+    border-radius: 10px;
+}
+

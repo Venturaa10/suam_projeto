@@ -12,8 +12,8 @@ body.dark {
 .checkbox {
     opacity: 0;
     display: flex;
-    bottom: 1px;
-    
+    bottom: 15px;
+    margin-top: 30px;
 }
 
 .label {
@@ -29,7 +29,7 @@ body.dark {
     height: 27px;
     width: 52px;
     transform: scale(1.5);
-    bottom: 5px;
+    bottom: 15px;
 }
 
 .label .ball {
@@ -49,7 +49,7 @@ body.dark {
 }
   
 .sun {
-    bottom: 20px;
+    top: 150px;
 }
 
 .moon {

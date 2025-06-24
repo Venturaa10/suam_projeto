@@ -7,6 +7,7 @@ body {
   
 main {
     padding: 20px;
+    display: block;
 }
   
 section {
@@ -25,10 +26,44 @@ a {
 }
 
 nav {
-  background-image: linear-gradient(to right, rgba(224, 224, 66, 0.589), yellow);
-  opacity: 0.8;
-  font-size: 18px;
+    background-image: linear-gradient(to right, rgba(224, 224, 66, 0.589), rgb(233, 233, 22), rgba(224, 224, 66, 0.589));
+    opacity: 0.8;
+    padding: 30px;
+    height: 70px;
+    width: 100%;
 
+}
+
+.container-fluid {
+    
+    margin-top: 10px;
+}
+
+#temas {
+    cursor: pointer;
+}
+
+.nav-item {
+    margin-right: 25px;
+    margin-top: 20px;
+}
+
+.nav-link {
+    color: black;
+    font-style: Arial;
+    font-size: 20px;
+}
+
+h1 {
+    font-style: italic;
+}
+
+h2 {
+    font-style: italic;
+} 
+
+h3 {
+    font-style: italic;
 }
 
 

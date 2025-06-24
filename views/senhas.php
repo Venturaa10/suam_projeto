@@ -26,7 +26,7 @@
           <li><p class="lead ">Não use palavras comuns como "senha", "123456", "admin", ou "qwerty". Elas são as primeiras que os hackers tentam.</p><br></li>
         </ul>
 
-        <h5 class="lead lh-2">Dica extra:</h5>
+        <h3 class="fs-2">Dica extra:</h3>
         <h5 class="lead lh-2"> Use gerenciadores de senha para criar e armazenar senhas seguras — eles ajudam a manter tudo protegido sem você precisar decorar cada uma.</h5>
     </div>
     <div class="col-md-5">
@@ -37,7 +37,7 @@
   <br>
   <br>
 
-  <h3 class="lead lh-2">Assista ao vídeo:</h3>
+  <h3 class="fs-2">Assista ao vídeo:</h3>
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/s7ldn31OEFc?si=O8RSOXd8TdH8fucJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/SsOmuomLfgM?si=vUF8gEPJrH-goOXE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

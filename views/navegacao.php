@@ -53,7 +53,7 @@
         <h5><strong>Obs: Cuidado com sites que têm muitos pop-ups, erros ou não mostram informações de contato.</strong></h5>
       </div>
       <div class="col-md-5">
-        <img src="./assets/img/siteseguro.jpg" alt="" width="700" height="400" >
+        <img src="./assets/img/siteseguro.jpg" alt="" class="img-nav" width="700" height="400" >
       </div>
     </div>
     
